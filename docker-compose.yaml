@@ -1,6 +1,19 @@
 version: '3.8'
 
 services:
+  backend:
+    build:
+      context: ./backend
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=super_secret_password
+      - MYSQL_DATABASE=underconstruction
+      - ADMIN_COOKIE=KSUS{45355537537570657241646696541636}
+    depends_on:
+      - db
+    restart: unless-stopped
+
   caddy:
     image: caddy:2
     ports:
@@ -9,15 +22,18 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ./caddy_data:/data
       - ./caddy_config:/config
+    depends_on:
+      - backend
     restart: unless-stopped
 
   db:
-    image: mysql:8.0
+    image: mysql:8.0.13
+    command: --max_connections=10000
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_USER=social_user
-      - MYSQL_PASSWORD=social_password
-      - MYSQL_DATABASE=social_network
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=super_secret_password
+      - MYSQL_DATABASE=underconstruction
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./mysql_data:/var/lib/mysql
