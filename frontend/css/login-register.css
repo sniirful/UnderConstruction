@@ -1,0 +1,74 @@
+form {
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+}
+form > h3 {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 32px;
+    color: var(--text-black);
+
+    margin: 0 auto 24px auto;
+}
+form > input {
+    background: transparent;
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 18px;
+    color: var(--text-black);
+
+    padding: 10px;
+
+    border: 3px solid var(--border-black);
+    border-radius: 6px;
+    margin: 0 0 12px 0;
+
+    outline: none;
+}
+form > input::placeholder {
+    color: var(--placeholder-gray);
+}
+form > button {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 32px;
+    color: var(--text-black);
+
+    background-color: transparent;
+    border: 3px solid var(--border-black);
+    border-radius: 6px;
+
+    margin: 0 auto 12px auto;
+    padding: 12px 30px;
+
+    cursor: pointer;
+}
+form > button:hover {
+    background-color: var(--border-black);
+    color: var(--manga-white);
+}
+form > a {
+    margin: 0 auto;
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 12px;
+    color: var(--link-blue);
+}
+form > a::selection {
+    background-color: var(--link-blue);
+    color: var(--manga-white);
+}

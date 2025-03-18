@@ -1,0 +1,205 @@
+body > main {
+    width: 40%;
+    margin: 0 auto;
+    padding: 32px 0;
+
+    display: flex;
+    flex-direction: column;
+}
+body > main.full > div.empty {
+    display: none;
+}
+body > main.full > div.chat {
+    display: none;
+}
+body > main.empty > * {
+    display: none;
+}
+body > main.empty > div.empty {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body > main.empty > div.empty > svg {
+    margin: 0 auto;
+
+    width: 128px;
+    height: 128px;
+
+    fill: var(--link-blue);
+}
+body > main.empty > div.empty > a {
+    margin: 0 auto;
+
+    font-size: 64px;
+    color: var(--link-blue);
+}
+body > main.full > div.full > div.chat {
+    border: 4px solid var(--border-black);
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    padding: 12px;
+    margin-bottom: 12px;
+
+    cursor: pointer;
+}
+body > main.full > div.full > div.chat:hover {
+    background-color: var(--border-black);
+}
+body > main.full > div.full > div.chat > div.profile-picture {
+    width: 48px;
+    height: 48px;
+
+    border: 4px solid var(--border-black);
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+body > main.full > div.full > div.chat > div.profile-picture > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+body > main.full > div.full > div.chat > div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: -8px;
+    margin-left: 6px;
+
+    overflow: hidden;
+}
+body > main.full > div.full > div.chat > div.container > span.username {
+    font-size: 24px;
+}
+body > main.full > div.full > div.chat:hover > div.container > span.username {
+    color: var(--manga-white);
+}
+body > main.full > div.full > div.chat > div.container > span.last-message {
+    font-size: 18px;
+    margin-top: -8px;
+
+    color: var(--placeholder-gray);
+
+    width: calc(100% - 48px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body > main.full > div.full > div.chat:hover > div.container > span.last-message {
+    color: var(--manga-white);
+}
+body > main.chat > * {
+    display: none;
+}
+body > main.chat > div.chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+body > main.chat > div.chat > div.user-info {
+    display: flex;
+    flex-direction: row;
+
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--placeholder-gray);
+}
+body > main.chat > div.chat > div.user-info > div.divider {
+    margin: 0 12px;
+}
+body > main.chat > div.chat > div.user-info > div.user-profile-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 4px solid var(--border-black);
+    border-radius: 50%;
+
+    width: 36px;
+    height: 36px;
+    margin: auto 0;
+
+    overflow: hidden;
+}
+body > main.chat > div.chat > div.user-info > div.user-profile-picture > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+body > main.chat > div.chat > div.user-info > span {
+    margin: auto 12px;
+}
+body > main.chat > div.chat > div.actual-chat {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+}
+body > main.chat > div.chat > div.actual-chat > div.text-container {
+    border: 4px solid var(--border-black);
+    border-radius: 18px;
+
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+body > main.chat > div.chat > div.actual-chat > div.text-container > textarea {
+    background: transparent;
+
+    width: 100%;
+    height: auto;
+
+    font-size: 18px;
+
+    border: none;
+    outline: none;
+
+    padding: 6px;
+}
+body > main.chat > div.chat > div.actual-chat > div.text-container > div.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 12px 2px 12px;
+}
+body > main.chat > div.chat > div.actual-chat > div.message {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    padding: 12px 0;
+}
+body > main.chat > div.chat > div.actual-chat > div.message.received {
+    justify-content: start;
+}
+body > main.chat > div.chat > div.actual-chat > div.message.sent {
+    justify-content: end;
+}
+body > main.chat > div.chat > div.actual-chat > div.message > div.bubble {
+    border: 4px solid var(--border-black);
+    border-radius: 18px;
+
+    padding: 12px;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+}
+body > main.chat > div.chat > div.actual-chat > div.message > div.bubble > div.time {
+    text-align: end;
+}

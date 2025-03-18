@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    flex-direction: row;
+
+    gap: 96px;
+}
+body > div#left,
+body > div#right {
+    width: calc(15%);
+    max-width: calc(15%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 38px;
+}
+/*body > div#right {*/
+/*    width: 15%;*/
+/*}*/
+body > div#left *,
+body > div#right * {
+    /*overflow-x: hidden;*/
+    /*overflow-y: initial;*/
+}
+body > div#left > div#main-content {
+    display: flex;
+    flex-direction: column;
+}
+body > div#left > div#main-content > a#user-container {
+    border: 8px solid var(--border-black);
+    border-radius: 28px;
+    padding: 12px;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: row;
+
+    cursor: pointer;
+}
+body > div#left > div#main-content > a#user-container.selected,
+body > div#left > div#main-content > a#user-container:hover {
+    background-color: var(--border-black);
+}
+body > div#left > div#main-content > a#user-container > div#picture-container {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    border: 4px solid var(--border-black);
+
+    overflow: hidden;
+
+    background-color: var(--manga-white);
+}
+body > div#left > div#main-content > a#user-container > div#picture-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body > div#left > div#main-content > a#user-container > span#username {
+    margin-left: 10px;
+    font-size: 24px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body > div#left > div#main-content > a#user-container.selected > span#username,
+body > div#left > div#main-content > a#user-container:hover > span#username {
+    color: var(--manga-white);
+}
+body > div#left > div#main-content > a.nav-item {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+
+    border: 4px solid var(--border-black);
+    border-radius: 8px;
+    padding: 10px;
+
+    margin-bottom: 12px;
+
+    cursor: pointer;
+}
+body > div#left > div#main-content > a.nav-item.selected,
+body > div#left > div#main-content > a.nav-item:hover {
+    background-color: var(--border-black);
+}
+body > div#left > div#main-content > a.nav-item.last {
+    margin-bottom: 0;
+}
+body > div#left > div#main-content > a.nav-item > svg {
+    width: 32px;
+    height: 32px;
+
+    fill: var(--text-black);
+}
+body > div#left > div#main-content > a.nav-item.selected > svg,
+body > div#left > div#main-content > a.nav-item:hover > svg {
+    fill: var(--manga-white);
+}
+body > div#left > div#main-content > a.nav-item > span {
+    margin-left: 14px;
+    font-size: 24px;
+}
+body > div#left > div#main-content > a.nav-item.selected > span,
+body > div#left > div#main-content > a.nav-item:hover > span {
+    color: var(--manga-white);
+}

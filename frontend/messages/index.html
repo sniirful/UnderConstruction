@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UnderConstruction - Messages</title>
+
+    <link rel="stylesheet" href="/css/base-elements.css">
+    <link rel="stylesheet" href="/css/side.css">
+    <link rel="stylesheet" href="/css/messages.css">
+    <link rel="stylesheet" href="/css/ads.css">
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/js/ads.js"></script>
+    <script src="/js/check-login.js"></script>
+    <script>
+        checkLoginAndRedirectToLogin();
+    </script>
+</head>
+<body>
+<div id="left">
+    <div id="main-content">
+        <a href="/profile" id="user-container">
+            <div id="picture-container">
+                <img src="/src/profile.png" alt="">
+            </div>
+            <span id="username" class="noto-sans vertical centered">sdifuhgdasuifhdasiufh</span>
+        </a>
+        <div class="divider"></div>
+        <a href="/home" class="noto-sans nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+            </svg>
+            <span class="vertical centered">Home</span>
+        </a>
+        <a href="/popular" class="noto-sans nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z"/>
+            </svg>
+            <span class="vertical centered">Popular</span>
+        </a>
+        <a href="/new" class="noto-sans nav-item last">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="M240-400q0 52 21 98.5t60 81.5q-1-5-1-9v-9q0-32 12-60t35-51l113-111 113 111q23 23 35 51t12 60v9q0 4-1 9 39-35 60-81.5t21-98.5q0-50-18.5-94.5T648-574q-20 13-42 19.5t-45 6.5q-62 0-107.5-41T401-690q-39 33-69 68.5t-50.5 72Q261-513 250.5-475T240-400Zm240 52-57 56q-11 11-17 25t-6 29q0 32 23.5 55t56.5 23q33 0 56.5-23t23.5-55q0-16-6-29.5T537-292l-57-56Zm0-492v132q0 34 23.5 57t57.5 23q18 0 33.5-7.5T622-658l18-22q74 42 117 117t43 163q0 134-93 227T480-80q-134 0-227-93t-93-227q0-129 86.5-245T480-840Z"/>
+            </svg>
+            <span class="vertical centered">New</span>
+        </a>
+        <div class="divider"></div>
+        <a href="/messages" class="noto-sans nav-item selected last">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="M880-80 720-240H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v560ZM160-473l47-47h393v-280H160v327ZM80-280v-520q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240L80-280Zm80-240v-280 280Z"/>
+            </svg>
+            <span class="vertical centered">Messages</span>
+        </a>
+    </div>
+    <div class="ads">
+        <div class="ad">
+            <span class="noto-sans">Ad</span>
+            <a href="">
+                <img src="" alt="Ad">
+            </a>
+        </div>
+    </div>
+</div>
+<!-- empty|full|chat -->
+<main class="empty">
+    <div class="empty">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M440-400h80v-120h120v-80H520v-120h-80v120H320v80h120v120ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/>
+        </svg>
+        <a href="" class="bangers start-new-chat">Start a new chat</a>
+    </div>
+    <div class="full">
+        <div class="button image">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="M440-400h80v-120h120v-80H520v-120h-80v120H320v80h120v120ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/>
+            </svg>
+            <span class="bangers start-new-chat">Start a new chat</span>
+        </div>
+        <div class="divider"></div>
+        <div class="chat">
+            <div class="profile-picture">
+                <img src="/src/profile.png">
+            </div>
+            <div class="container">
+                <span class="username noto-sans">username</span>
+                <span class="last-message noto-sans">aaa</span>
+            </div>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="user-info">
+            <div class="button image">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                     fill="#e3e3e3">
+                    <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+                </svg>
+                <span class="bangers">Back</span>
+            </div>
+            <div class="divider vertical"></div>
+            <div class="user-profile-picture">
+                <img src="/src/profile.png">
+            </div>
+            <span class="noto-sans">username!!</span>
+        </div>
+        <div class="actual-chat">
+            <div class="text-container">
+                <textarea class="noto-sans" rows="3" placeholder="Enter text..."></textarea>
+                <div class="buttons-container">
+                    <div id="add-picture-button" class="mini-button image vertical centered bangers">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                             fill="#e3e3e3">
+                            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Z"/>
+                        </svg>
+                        <span>Add picture</span>
+                    </div>
+                    <!-- Must use the div instead of the button because Chrome decides for us, apparently. -->
+                    <div id="post-button" class="mini-button vertical centered bangers">Send</div>
+                </div>
+            </div>
+            <div class="message received">
+                <div class="bubble">
+                    <div class="text noto-sans">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, illum temporibus. Doloremque
+                        maiores numquam quo soluta totam. Aperiam, officiis tenetur?
+                    </div>
+                    <div class="time noto-sans">18:04</div>
+                </div>
+            </div>
+            <div class="message sent">
+                <div class="bubble">
+                    <div class="text noto-sans">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, illum temporibus. Doloremque
+                        maiores numquam quo soluta totam. Aperiam, officiis tenetur?
+                    </div>
+                    <div class="time noto-sans">18:04</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div id="right">
+    <div class="ad">
+        <span class="noto-sans">Ad</span>
+        <a href="">
+            <img src="" alt="Ad">
+        </a>
+    </div>
+    <div class="ad">
+        <span class="noto-sans">Ad</span>
+        <a href="">
+            <img src="" alt="Ad">
+        </a>
+    </div>
+    <div class="ad">
+        <span class="noto-sans">Ad</span>
+        <a href="">
+            <img src="" alt="Ad">
+        </a>
+    </div>
+</div>
+
+<script src="/js/side.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/messages.js"></script>
+
+</body>
+</html>

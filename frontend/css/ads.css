@@ -1,0 +1,32 @@
+.ad {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 4px solid var(--border-black);
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+.ad > span {
+    color: var(--placeholder-gray);
+    font-size: 12px;
+
+    margin: 4px;
+}
+.ad > a {
+    width: 100%;
+    height: 100%;
+
+    border-top: 1px solid var(--placeholder-gray);
+}
+.ad > a > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    background-color: white;
+}

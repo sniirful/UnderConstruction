@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UnderConstruction - Register</title>
+
+    <link rel="stylesheet" href="/css/base-elements.css">
+    <link rel="stylesheet" href="/css/login-register.css">
+
+    <script src="/js/check-login.js"></script>
+    <script>
+        checkLoginAndRedirectToHome();
+    </script>
+</head>
+<body>
+<div class="max-height max-width horizontal centered">
+    <div class="max-height vertical centered">
+        <!-- We do not need the action, handling it via JS. -->
+        <form action="">
+            <h3>Register</h3>
+            <input type="text" name="username" placeholder="username">
+            <input type="email" name="email" placeholder="email@example.com">
+            <input type="password" name="password" placeholder="••••••••">
+            <button>Join</button>
+            <a href="/login">Already have an account? Login</a>
+        </form>
+    </div>
+
+    <script src="/js/register.js"></script>
+</div>
+</body>
+</html>

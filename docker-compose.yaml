@@ -14,6 +14,13 @@ services:
       - db
     restart: unless-stopped
 
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - backend
+    restart: unless-stopped
+
   ads:
     build:
       context: ./ads
@@ -29,6 +36,7 @@ services:
       - ./caddy_config:/config
     depends_on:
       - backend
+      - frontend
     restart: unless-stopped
 
   db:

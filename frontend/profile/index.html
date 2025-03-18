@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UnderConstruction - Profile</title>
+
+    <link rel="stylesheet" href="/css/base-elements.css">
+    <link rel="stylesheet" href="/css/side.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/ads.css">
+
+    <script src="/js/ads.js"></script>
+    <script src="/js/check-login.js"></script>
+    <script>
+        checkLoginAndRedirectToLogin();
+    </script>
+</head>
+<body>
+<div id="left">
+    <div id="main-content">
+        <a href="/profile" id="user-container" class="selected">
+            <div id="picture-container">
+                <img src="/src/profile.png" alt="">
+            </div>
+            <span id="username" class="noto-sans vertical centered"></span>
+        </a>
+        <div class="divider"></div>
+        <a href="/home" class="noto-sans nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+            </svg>
+            <span class="vertical centered">Home</span>
+        </a>
+        <a href="/popular" class="noto-sans nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z"/>
+            </svg>
+            <span class="vertical centered">Popular</span>
+        </a>
+        <a href="/new" class="noto-sans nav-item last">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="M240-400q0 52 21 98.5t60 81.5q-1-5-1-9v-9q0-32 12-60t35-51l113-111 113 111q23 23 35 51t12 60v9q0 4-1 9 39-35 60-81.5t21-98.5q0-50-18.5-94.5T648-574q-20 13-42 19.5t-45 6.5q-62 0-107.5-41T401-690q-39 33-69 68.5t-50.5 72Q261-513 250.5-475T240-400Zm240 52-57 56q-11 11-17 25t-6 29q0 32 23.5 55t56.5 23q33 0 56.5-23t23.5-55q0-16-6-29.5T537-292l-57-56Zm0-492v132q0 34 23.5 57t57.5 23q18 0 33.5-7.5T622-658l18-22q74 42 117 117t43 163q0 134-93 227T480-80q-134 0-227-93t-93-227q0-129 86.5-245T480-840Z"/>
+            </svg>
+            <span class="vertical centered">New</span>
+        </a>
+        <div class="divider"></div>
+        <a href="/messages" class="noto-sans nav-item last">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="M880-80 720-240H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v560ZM160-473l47-47h393v-280H160v327ZM80-280v-520q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240L80-280Zm80-240v-280 280Z"/>
+            </svg>
+            <span class="vertical centered">Messages</span>
+        </a>
+    </div>
+    <div class="ads">
+        <div class="ad">
+            <span class="noto-sans">Ad</span>
+            <a href="">
+                <img src="" alt="Ad">
+            </a>
+        </div>
+    </div>
+</div>
+<main>
+    <h3 class="bangers">Info</h3>
+    <div class="entry">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/>
+        </svg>
+        <span class="bangers">Username:&nbsp;</span>
+        <span id="info-username" class="noto-sans"></span>
+    </div>
+    <div class="entry">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/>
+        </svg>
+        <span class="bangers">Email:&nbsp;</span>
+        <span id="info-email" class="noto-sans"></span>
+    </div>
+    <div class="entry">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm263-80h377v-309l-27-37-93 30-92-30-58 79-93 30v98l-57 79 43 60Zm-99 0-43-60 76-105v-130l123-40 77-105 123 40 120-39v-41H160v480h164Zm113-237Z"/>
+        </svg>
+        <span class="bangers">Favorite Manga:&nbsp;</span>
+        <span id="info-fav-manga" class="noto-sans"></span>
+        <div class="mini-button bangers">Change</div>
+    </div>
+    <div class="entry">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm263-80h377v-309l-27-37-93 30-92-30-58 79-93 30v98l-57 79 43 60Zm-99 0-43-60 76-105v-130l123-40 77-105 123 40 120-39v-41H160v480h164Zm113-237Z"/>
+        </svg>
+        <span class="bangers">Favorite Genres:&nbsp;</span>
+        <span id="info-fav-genres" class="noto-sans"></span>
+        <div class="mini-button bangers">Change</div>
+    </div>
+    <button class="button image">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm263-80h377v-309l-27-37-93 30-92-30-58 79-93 30v98l-57 79 43 60Zm-99 0-43-60 76-105v-130l123-40 77-105 123 40 120-39v-41H160v480h164Zm113-237Z"/>
+        </svg>
+        <span class="bangers">Change profile picture</span>
+    </button>
+</main>
+<div id="right">
+    <div class="ad">
+        <span class="noto-sans">Ad</span>
+        <a href="">
+            <img src="" alt="Ad">
+        </a>
+    </div>
+    <div class="ad">
+        <span class="noto-sans">Ad</span>
+        <a href="">
+            <img src="" alt="Ad">
+        </a>
+    </div>
+    <div class="ad">
+        <span class="noto-sans">Ad</span>
+        <a href="">
+            <img src="" alt="Ad">
+        </a>
+    </div>
+</div>
+
+<script src="/js/side.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/profile.js"></script>
+</body>
+</html>
