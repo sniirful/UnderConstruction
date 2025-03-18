@@ -1,1 +1,4 @@
 .idea
+caddy_config
+caddy_data
+mysql_data
