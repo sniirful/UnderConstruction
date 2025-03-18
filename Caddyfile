@@ -7,6 +7,10 @@
         reverse_proxy backend:5000
     }
 
+    handle /ad {
+        reverse_proxy ads:5000
+    }
+
     handle * {
         reverse_proxy frontend:80
     }
